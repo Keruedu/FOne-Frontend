@@ -4870,6 +4870,62 @@ a {
   border-radius: 46px;
 }
 
+/* The hero presents the three journeys together instead of hiding them behind
+   a carousel. The side screens fan out from the main screen like floating
+   Zalo surfaces. */
+.phone-cluster {
+  position: absolute;
+  z-index: 4;
+  inset: 0;
+  pointer-events: none;
+}
+
+.phone-cluster-phone {
+  pointer-events: auto;
+  transform-origin: 50% 92%;
+  transition:
+    transform 420ms cubic-bezier(0.2, 0.8, 0.2, 1),
+    box-shadow 420ms ease;
+}
+
+.phone-cluster-1 {
+  top: 82px;
+  left: calc(50% - 255px);
+  z-index: 3;
+  transform: translateX(-50%) rotate(-9deg) scale(0.78);
+}
+
+.phone-cluster-2 {
+  top: 25px;
+  left: 50%;
+  z-index: 5;
+  transform: translateX(-50%) rotate(0deg) scale(1);
+}
+
+.phone-cluster-3 {
+  top: 75px;
+  left: calc(50% + 255px);
+  z-index: 3;
+  transform: translateX(-50%) rotate(9deg) scale(0.78);
+}
+
+.phone-cluster-1:hover,
+.phone-cluster-3:hover {
+  transform: translateX(-50%) rotate(0deg) scale(0.82) translateY(-8px);
+}
+
+.hero-title,
+.phone-story-copy h2,
+.story-heading h2,
+.oa-trust-heading h2,
+.journey-sticky h2,
+.hackathon-copy h2,
+.editorial-card h2,
+.final-hook h2 {
+  letter-spacing: -0.045em;
+  line-height: 0.98;
+}
+
 /* The supplied FOne artwork is already a high-resolution 1170×2532 export.
    Keep its native proportions and give the brand mark a crisp, contained frame. */
 .brand-home-link,
@@ -4884,7 +4940,7 @@ a {
 
 .brand-logo-image {
   display: grid;
-  width: 92px;
+  width: 112px;
   height: 44px;
   flex: 0 0 auto;
   place-items: center;
@@ -4907,11 +4963,65 @@ a {
 }
 
 .chat-page-header .brand-logo-image {
-  width: 108px;
+  width: 118px;
   height: 50px;
 }
 
 .brand-footer .brand-logo-image {
-  width: 108px;
+  width: 126px;
   height: 52px;
+}
+
+.adaptive-header.is-compact .adaptive-header-inner {
+  width: max-content;
+  max-width: calc(100% - 40px);
+}
+
+.adaptive-header.is-compact .brand-logo-image {
+  width: 92px;
+  height: 34px;
+}
+
+@media (max-width: 760px) {
+  .hero-section {
+    min-height: 1100px;
+  }
+
+  .showcase-stage {
+    height: 665px;
+  }
+
+  .adaptive-header.is-compact .adaptive-header-inner {
+    width: calc(100% - 18px);
+    max-width: none;
+  }
+
+  .adaptive-header .brand-logo-image,
+  .adaptive-header.is-compact .brand-logo-image {
+    width: 92px;
+    height: 34px;
+  }
+
+  .phone-cluster-1 {
+    top: 104px;
+    left: calc(50% - 126px);
+    transform: translateX(-50%) rotate(-12deg) scale(0.48);
+  }
+
+  .phone-cluster-2 {
+    top: 28px;
+    left: 50%;
+    transform: translateX(-50%) rotate(0deg) scale(0.92);
+  }
+
+  .phone-cluster-3 {
+    top: 106px;
+    left: calc(50% + 126px);
+    transform: translateX(-50%) rotate(12deg) scale(0.48);
+  }
+
+  .phone-cluster-1:hover,
+  .phone-cluster-3:hover {
+    transform: translateX(-50%) rotate(0deg) scale(0.52) translateY(-6px);
+  }
 }

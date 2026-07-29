@@ -1,11 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useState } from "react";
 
 import { OaShowcaseCard } from "@/components/oa-showcase-card";
 
-const SLIDES = [
+const PHONE_CLUSTER = [
   {
     screen: "/phone/fone-profile.png",
     label: "Màn hình giới thiệu OA FOne",
@@ -64,26 +63,6 @@ const FLOATING_OAS = [
 ] as const;
 
 export function HeroShowcase() {
-  const [active, setActive] = useState(0);
-
-  useEffect(() => {
-    const timer = window.setInterval(
-      () => setActive((current) => (current + 1) % SLIDES.length),
-      5200,
-    );
-    return () => window.clearInterval(timer);
-  }, []);
-
-  const slide = SLIDES[active];
-
-  function previous() {
-    setActive((current) => (current - 1 + SLIDES.length) % SLIDES.length);
-  }
-
-  function next() {
-    setActive((current) => (current + 1) % SLIDES.length);
-  }
-
   return (
     <div className="showcase-stage">
       <div className="showcase-orbit orbit-one" aria-hidden />
@@ -112,33 +91,24 @@ export function HeroShowcase() {
         />
       ))}
 
-      <button className="slider-arrow slider-prev" onClick={previous} aria-label="Slide trước">
-        ‹
-      </button>
-      <div className="phone-shell reference-phone-shell">
-        <div className="phone-speaker" />
-        <div className="phone-screen phone-screen-reference" key={active}>
-          <Image
-            src={slide.screen}
-            alt={slide.label}
-            fill
-            sizes="(max-width: 760px) 270px, 292px"
-            quality={100}
-            priority={active === 0}
-          />
-        </div>
-      </div>
-      <button className="slider-arrow slider-next" onClick={next} aria-label="Slide tiếp theo">
-        ›
-      </button>
-      <div className="slider-dots" aria-label="Chọn slide">
-        {SLIDES.map((item, index) => (
-          <button
-            key={item.screen}
-            className={index === active ? "is-active" : ""}
-            onClick={() => setActive(index)}
-            aria-label={`Xem slide ${index + 1}: ${item.label}`}
-          />
+      <div className="phone-cluster" aria-label="Ba màn hình trải nghiệm FOne">
+        {PHONE_CLUSTER.map((phone, index) => (
+          <div
+            className={`phone-shell reference-phone-shell phone-cluster-phone phone-cluster-${index + 1}`}
+            key={phone.screen}
+          >
+            <div className="phone-speaker" />
+            <div className="phone-screen phone-screen-reference">
+              <Image
+                src={phone.screen}
+                alt={phone.label}
+                fill
+                sizes="(max-width: 760px) 270px, 292px"
+                quality={100}
+                priority={index === 1}
+              />
+            </div>
+          </div>
         ))}
       </div>
     </div>

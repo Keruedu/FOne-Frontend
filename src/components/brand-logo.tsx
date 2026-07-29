@@ -5,10 +5,10 @@ export function BrandLogo() {
     <span className="brand-lockup brand-logo-lockup">
       <span className="brand-logo-image">
         <Image
-          src="/brand/fone-logo.webp"
+          src="/brand/fone-wordmark.webp"
           alt="FOne"
-          width={240}
-          height={120}
+          width={672}
+          height={238}
           priority
         />
       </span>
