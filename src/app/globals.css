@@ -5639,6 +5639,7 @@ a {
   font-style: normal;
   line-height: 0.88;
   text-transform: uppercase;
+  transform: translateX(0);
   white-space: nowrap;
 }
 
@@ -5649,6 +5650,33 @@ a {
 
 .hackathon-copy h2 .hackathon-title-event {
   margin-top: 0.13em;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .hackathon-copy h2 .hackathon-title-accent,
+  .hackathon-copy h2 .hackathon-title-copy {
+    transition:
+      transform 420ms cubic-bezier(0.22, 1, 0.36, 1),
+      letter-spacing 420ms cubic-bezier(0.22, 1, 0.36, 1),
+      text-shadow 420ms ease;
+    will-change: transform;
+  }
+
+  .hackathon-copy h2:hover .hackathon-title-za {
+    letter-spacing: 0.025em;
+    text-shadow: -18px 0 34px rgba(22, 130, 255, 0.24);
+    transform: translateX(-24px);
+  }
+
+  .hackathon-copy h2:hover .hackathon-title-copy {
+    transform: scale(0.985);
+  }
+
+  .hackathon-copy h2:hover .hackathon-title-event {
+    letter-spacing: 0.015em;
+    text-shadow: 18px 0 34px rgba(22, 130, 255, 0.24);
+    transform: translateX(24px);
+  }
 }
 
 @media (max-width: 760px) {
