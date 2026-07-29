@@ -12,6 +12,7 @@ import {
 type Choice = {
   name?: string;
   launch_url?: string;
+  avatar_url?: string;
   reason?: string;
 };
 
@@ -182,6 +183,15 @@ export function WebChat() {
                   {message.choices?.map((choice) =>
                     choice.name && choice.launch_url ? (
                       <div className="prompt-choice" key={choice.launch_url}>
+                        {choice.avatar_url ? (
+                          <img
+                            className="prompt-choice-avatar"
+                            src={choice.avatar_url}
+                            alt=""
+                            width={44}
+                            height={44}
+                          />
+                        ) : null}
                         <span>
                           <strong>{choice.name}</strong>
                           {choice.reason ? <small>{choice.reason}</small> : null}
