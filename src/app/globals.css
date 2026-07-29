@@ -5582,3 +5582,57 @@ a {
     font-size: clamp(54px, 6vw, 82px);
   }
 }
+
+.oa-variant-blue .oa-showcase-action {
+  background: rgba(255, 255, 255, 0.16);
+  color: white;
+}
+
+.oa-variant-blue:hover .oa-showcase-action {
+  background: white;
+  color: #0068ff;
+}
+
+.oa-variant-white .oa-showcase-action {
+  background: #e5f1ff;
+  color: #0068ff;
+}
+
+.oa-variant-white:hover .oa-showcase-action {
+  background: #0068ff;
+  color: white;
+}
+
+.oa-showcase-action svg {
+  stroke-width: 2.15;
+}
+
+.oa-card-floating.oa-layout-reverse {
+  grid-template-columns: 32px minmax(0, 1fr) 52px;
+}
+
+.oa-card-directory.oa-layout-reverse {
+  grid-template-columns: 40px minmax(0, 1fr) 74px;
+}
+
+.hackathon-copy h2 em {
+  display: inline-block;
+  color: #1682ff;
+  font-size: 0.82em;
+  font-style: normal;
+  white-space: nowrap;
+}
+
+@media (max-width: 760px) {
+  .oa-card-floating.oa-layout-reverse {
+    grid-template-columns: 28px minmax(0, 1fr) 41px;
+  }
+
+  .oa-card-directory.oa-layout-reverse {
+    grid-template-columns: 34px minmax(0, 1fr) 52px;
+  }
+
+  .hackathon-copy h2 em {
+    font-size: 0.76em;
+  }
+}

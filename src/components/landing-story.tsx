@@ -380,7 +380,7 @@ export function HackathonStory({ oaUrl }: { oaUrl: string | null }) {
     <section className="hackathon-section">
       <div className="hackathon-copy">
         <span>Từ setup đến demo hoàn chỉnh</span>
-        <h2>Xem FOne<br />hoạt động tại<br />ZA Hackathon.</h2>
+        <h2>Xem FOne<br />hoạt động tại<br /><em>ZA Hackathon.</em></h2>
         <p>
           Một đội 4 thành viên, một Service Catalog thật, một AI retrieval flow và một Zalo OA
           được kết nối từ webhook đến câu trả lời cuối cùng.
