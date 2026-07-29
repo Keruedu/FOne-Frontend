@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
-/* Zalo-familiar palette: visitors arrive from Zalo and the assistant lives inside a
-   Zalo OA, so the page uses the channel's blue and its chat-bubble shapes. FOne is a
-   third-party OA built on the platform, not a Zalo product. */
+/* Zalo-familiar palette. Visitors arrive from Zalo and the assistant lives inside a
+   Zalo OA, so the page borrows the channel's blue and its chat-bubble shapes. FOne is
+   a third-party OA built on the platform, not a Zalo product. */
 @theme {
   --color-zalo-50: #eef5ff;
   --color-zalo-100: #e0edff;
@@ -21,7 +21,7 @@
   --color-line: #e3e9f2;
 
   --radius-card: 18px;
-  --radius-bubble: 20px;
+  --radius-bubble: 18px;
 }
 
 body {
@@ -31,11 +31,19 @@ body {
     "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
 }
 
-/* Incoming/outgoing chat bubbles used in the hero mock conversation. */
+/* Chat bubbles get one squared-off corner on the side they originate from, the way
+   Zalo tails its bubbles. */
 .bubble-in {
-  border-bottom-left-radius: 6px;
+  border-bottom-left-radius: 5px;
 }
 
 .bubble-out {
-  border-bottom-right-radius: 6px;
+  border-bottom-right-radius: 5px;
+}
+
+/* Soft blue wash behind the hero, echoing Zalo's gradient headers. */
+.hero-wash {
+  background:
+    radial-gradient(60rem 30rem at 15% -10%, var(--color-zalo-100), transparent 60%),
+    radial-gradient(45rem 28rem at 95% 0%, #dbe9ff, transparent 55%);
 }
