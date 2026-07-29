@@ -50,7 +50,8 @@ const OAS = [
     category: "Sức khỏe",
     image: "/oa/longchau.jpg",
     href: "https://zalo.me/3822805105108870889",
-    variant: "split",
+    variant: "white",
+    layout: "standard",
   },
   {
     name: "Hocmaivn",
@@ -58,6 +59,7 @@ const OAS = [
     image: "/oa/hocmai.jpg",
     href: "https://zalo.me/4473983057669494536",
     variant: "white",
+    layout: "reverse",
   },
   {
     name: "VUS Anh văn Hội Việt Mỹ",
@@ -65,27 +67,31 @@ const OAS = [
     image: "/oa/vus.jpg",
     href: "https://zalo.me/2470779593552436062",
     variant: "blue",
+    layout: "compact",
   },
   {
     name: "GoGi House",
     category: "Ăn uống",
     image: "/oa/gogi.jpg",
     href: "https://zalo.me/4065039816957305114",
-    variant: "white",
+    variant: "blue",
+    layout: "standard",
   },
   {
     name: "Morico",
     category: "Ăn uống",
     image: "/oa/morico.jpg",
     href: "https://zalo.me/933370737442378632",
-    variant: "split",
+    variant: "white",
+    layout: "reverse",
   },
   {
     name: "FOne",
     category: "AI Service Navigator",
-    image: "/brand/fone-logo.webp",
+    image: null,
     href: "https://zalo.me/2624324193992110831",
     variant: "blue",
+    layout: "compact",
   },
 ] as const;
 

@@ -4427,9 +4427,9 @@ a {
 }
 
 .oa-showcase-logo img {
-  width: 82%;
-  height: 82%;
-  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .oa-showcase-logo b {
@@ -4478,7 +4478,7 @@ a {
 .oa-showcase-card:hover .oa-showcase-action {
   background: var(--oa-card-rule);
   color: white;
-  transform: rotate(-5deg) scale(1.06);
+  transform: translateY(-1px) scale(1.06);
 }
 
 .oa-showcase-action svg {
@@ -4500,48 +4500,71 @@ a {
   border-color: #005ee8;
 }
 
-.oa-variant-split {
-  --oa-card-bg: linear-gradient(90deg, #fff 0 31%, #0873ff 31% 100%);
-  --oa-card-ink: #fff;
-  --oa-card-muted: rgba(255, 255, 255, 0.67);
-  --oa-card-depth: #8bc0ff;
-  --oa-card-rule: #0068ff;
-  border-color: #79b2ff;
-}
-
-.oa-variant-split .oa-showcase-action {
-  background: rgba(255, 255, 255, 0.16);
-  color: white;
-}
-
 .oa-card-floating.float-one {
   top: 82px;
   left: 2%;
+  z-index: 7;
   transform: rotate(-6deg) rotateX(8deg) rotateY(12deg) translateZ(28px);
 }
 
 .oa-card-floating.float-two {
   top: 256px;
   left: 0;
+  z-index: 2;
   transform: rotate(4deg) rotateX(-6deg) rotateY(10deg) translateZ(18px);
 }
 
 .oa-card-floating.float-three {
   top: 431px;
   left: 11%;
+  z-index: 7;
   transform: rotate(-4deg) rotateX(8deg) rotateY(-12deg) translateZ(24px);
 }
 
 .oa-card-floating.float-four {
   top: 82px;
   right: 2%;
+  z-index: 2;
   transform: rotate(6deg) rotateX(7deg) rotateY(-13deg) translateZ(24px);
 }
 
 .oa-card-floating.float-five {
   top: 306px;
   right: -1%;
+  z-index: 7;
   transform: rotate(-4deg) rotateX(-7deg) rotateY(-10deg) translateZ(20px);
+}
+
+.oa-layout-reverse {
+  grid-template-columns: auto minmax(0, 1fr) auto;
+}
+
+.oa-layout-reverse .oa-showcase-logo {
+  order: 3;
+}
+
+.oa-layout-reverse .oa-showcase-copy {
+  order: 2;
+  text-align: right;
+}
+
+.oa-layout-reverse .oa-showcase-action {
+  order: 1;
+}
+
+.oa-card-floating.oa-layout-compact {
+  width: 220px;
+  min-height: 68px;
+}
+
+.oa-layout-compact .oa-showcase-logo {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+}
+
+.oa-card-directory.oa-layout-compact {
+  min-height: 142px;
 }
 
 .feature-story {
@@ -4973,13 +4996,23 @@ a {
 }
 
 .adaptive-header.is-compact .adaptive-header-inner {
-  width: max-content;
-  max-width: calc(100% - 40px);
+  width: min(1180px, calc(100% - 32px));
+  max-width: none;
 }
 
 .adaptive-header.is-compact .brand-logo-image {
-  width: 92px;
-  height: 34px;
+  width: 112px;
+  height: 44px;
+}
+
+.hero-section {
+  z-index: 2;
+}
+
+.phone-story {
+  z-index: 1;
+  margin-top: -96px;
+  padding-top: 96px;
 }
 
 @media (max-width: 760px) {

@@ -26,7 +26,8 @@ const FLOATING_OAS = [
     category: "Sức khỏe",
     image: "/oa/longchau.jpg",
     href: "https://zalo.me/3822805105108870889",
-    variant: "split",
+    variant: "blue",
+    layout: "compact",
   },
   {
     className: "float-two",
@@ -35,6 +36,7 @@ const FLOATING_OAS = [
     image: "/oa/hocmai.jpg",
     href: "https://zalo.me/4473983057669494536",
     variant: "white",
+    layout: "reverse",
   },
   {
     className: "float-three",
@@ -43,6 +45,7 @@ const FLOATING_OAS = [
     image: "/oa/gogi.jpg",
     href: "https://zalo.me/4065039816957305114",
     variant: "blue",
+    layout: "standard",
   },
   {
     className: "float-four",
@@ -50,7 +53,8 @@ const FLOATING_OAS = [
     category: "Giáo dục",
     image: "/oa/vus.jpg",
     href: "https://zalo.me/2470779593552436062",
-    variant: "split",
+    variant: "white",
+    layout: "compact",
   },
   {
     className: "float-five",
@@ -58,7 +62,8 @@ const FLOATING_OAS = [
     category: "Ăn uống",
     image: "/oa/morico.jpg",
     href: "https://zalo.me/933370737442378632",
-    variant: "white",
+    variant: "blue",
+    layout: "reverse",
   },
 ] as const;
 
