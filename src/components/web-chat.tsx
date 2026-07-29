@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import {
   FormEvent,
   KeyboardEvent,
@@ -30,10 +31,11 @@ function SendIcon() {
 }
 
 function FOneMark() {
+  // The same avatar the Official Account uses, so the web chat reads as the same
+  // assistant people meet on Zalo rather than a differently-branded lookalike.
   return (
     <span className="prompt-fone-mark" aria-hidden="true">
-      <span>F</span>
-      <i />
+      <Image src="/brand/fone-team-logo.jpg" alt="" width={72} height={72} />
     </span>
   );
 }
@@ -115,7 +117,7 @@ export function WebChat() {
         <section className="prompt-landing" aria-labelledby="prompt-title">
           <div className="prompt-badge">
             <FOneMark />
-            <span>FOne AI Service Navigator</span>
+            <span>FOne Assistant</span>
           </div>
           <h1 id="prompt-title">Bạn đang tìm dịch vụ gì?</h1>
           <p>Chỉ cần mô tả nhu cầu. FOne sẽ tìm OA phù hợp ngay trên Zalo.</p>
@@ -155,7 +157,6 @@ export function WebChat() {
               <FOneMark />
               <span>
                 <strong>FOne Assistant</strong>
-                <small><i /> Đang sẵn sàng</small>
               </span>
             </div>
             <button

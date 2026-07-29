@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { useState } from "react";
 
 import { OaShowcaseCard } from "@/components/oa-showcase-card";
 
@@ -68,6 +69,8 @@ const FLOATING_OAS = [
 ] as const;
 
 export function HeroShowcase() {
+  // The three screens sit stacked until asked for, so the hero stays readable.
+  const [fanned, setFanned] = useState(false);
   return (
     <div className="showcase-stage">
       <div className="showcase-orbit orbit-one" aria-hidden />
@@ -96,9 +99,16 @@ export function HeroShowcase() {
         />
       ))}
 
-      <div className="phone-cluster" aria-label="Ba màn hình trải nghiệm FOne">
+      <div
+        className={`phone-cluster${fanned ? " is-fanned" : ""}`}
+        aria-label="Ba màn hình trải nghiệm FOne"
+      >
         {PHONE_CLUSTER.map((phone, index) => (
-          <div
+          <button
+            type="button"
+            aria-expanded={fanned}
+            aria-label={fanned ? "Thu gọn ba màn hình" : `Xòe ba màn hình — ${phone.label}`}
+            onClick={() => setFanned((open) => !open)}
             className={`phone-shell reference-phone-shell phone-cluster-phone phone-cluster-${index + 1}`}
             key={phone.screen}
           >
@@ -113,7 +123,7 @@ export function HeroShowcase() {
                 priority={index === 1}
               />
             </div>
-          </div>
+          </button>
         ))}
       </div>
     </div>

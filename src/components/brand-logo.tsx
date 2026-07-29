@@ -12,7 +12,6 @@ export function BrandLogo() {
           priority
         />
       </span>
-      <small className="brand-logo-tagline">AI Service Navigator</small>
     </span>
   );
 }

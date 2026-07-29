@@ -87,7 +87,7 @@ const OAS = [
   },
   {
     name: "FOne",
-    category: "AI Service Navigator",
+    category: "Trợ lý tìm dịch vụ",
     image: "/brand/fone-team-logo.jpg",
     href: "https://zalo.me/2624324193992110831",
     variant: "blue",
@@ -214,10 +214,6 @@ export function PhoneDemoStory() {
               />
             </div>
           </div>
-          <div className="demo-play-state" aria-hidden>
-            <span>{playing ? "Đang phát" : "Cuộn để phát"}</span>
-            <i><b /></i>
-          </div>
         </div>
 
         <div className="phone-story-index">
@@ -253,7 +249,7 @@ export function FeatureStory() {
     <section id="tinh-nang" className="feature-story">
       <div className="story-heading">
         <span>FOne hoạt động như thế nào</span>
-        <h2>Mở. Linh hoạt.<br />Có thể mở rộng.</h2>
+        <h2>Mở và linh hoạt.</h2>
       </div>
 
       <div className="feature-story-layout">
@@ -294,7 +290,7 @@ export function EditorialPanels() {
       <article className="editorial-card editorial-blue">
         <div>
           <span>Nền tảng của trải nghiệm tìm dịch vụ</span>
-          <h2>Đúng dữ liệu.<br />Đúng ngữ cảnh.<br />Đúng điểm đến.</h2>
+          <h2>Đúng dữ liệu, đúng ngữ cảnh.</h2>
           <p>
             FOne kết hợp khả năng hiểu ngôn ngữ của AI với danh mục dịch vụ có cấu trúc,
             để sự linh hoạt không đánh đổi độ tin cậy.
@@ -315,7 +311,7 @@ export function EditorialPanels() {
       <article className="editorial-card editorial-white">
         <div>
           <span>Thiết kế mở từ đầu</span>
-          <h2>Không dừng lại<br />ở riêng Zalo OA.</h2>
+          <h2>Không chỉ riêng Zalo OA.</h2>
           <p>
             Kiến trúc registry và retrieval cho phép bổ sung Mini App hoặc nguồn dịch vụ mới
             mà không cần viết lại toàn bộ flow hội thoại.
@@ -341,7 +337,7 @@ export function OATrustWall() {
     <section id="oa-noi-bat" className="oa-trust-section">
       <div className="oa-trust-heading">
         <span>Điểm đến phù hợp</span>
-        <h2>Những OA quen thuộc.<br />Mở bằng một chạm.</h2>
+        <h2>Mở OA bằng một chạm.</h2>
         <p>Chọn một thẻ để mở đúng Official Account ngay trên Zalo.</p>
       </div>
 
@@ -364,7 +360,7 @@ export function ProjectJourney() {
     <section id="hanh-trinh" className="journey-section">
       <div className="journey-sticky">
         <span>Quá trình làm dự án</span>
-        <h2>Học nhanh.<br />Mở rộng thông minh.<br />Luôn linh hoạt.</h2>
+        <h2>Học nhanh, mở rộng dễ.</h2>
         <p>Bốn chặng biến một ý tưởng hackathon thành một luồng OA có thể chạy thật.</p>
       </div>
 
