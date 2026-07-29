@@ -231,18 +231,34 @@ export function FeatureStory() {
   const cardsRef = useRef<Array<HTMLElement | null>>([]);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const visible = entries
-          .filter((entry) => entry.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-        if (visible) setActive(Number((visible.target as HTMLElement).dataset.index));
-      },
-      { rootMargin: "-28% 0px -42% 0px", threshold: [0, 0.2, 0.55] },
-    );
+    let frame = 0;
+    const updateActiveCard = () => {
+      frame = 0;
+      const triggerLine = window.innerHeight * 0.5;
+      let nextActive = 0;
 
-    cardsRef.current.forEach((card) => card && observer.observe(card));
-    return () => observer.disconnect();
+      // Pick the last card whose top has crossed the viewport midpoint. Unlike
+      // IntersectionObserver callbacks, this cannot revive card 01 from a stale
+      // visibility entry after card 02 has already crossed the same line.
+      cardsRef.current.forEach((card, index) => {
+        if (card && card.getBoundingClientRect().top <= triggerLine) {
+          nextActive = index;
+        }
+      });
+      setActive((current) => (current === nextActive ? current : nextActive));
+    };
+    const scheduleUpdate = () => {
+      if (!frame) frame = window.requestAnimationFrame(updateActiveCard);
+    };
+
+    scheduleUpdate();
+    window.addEventListener("scroll", scheduleUpdate, { passive: true });
+    window.addEventListener("resize", scheduleUpdate);
+    return () => {
+      window.removeEventListener("scroll", scheduleUpdate);
+      window.removeEventListener("resize", scheduleUpdate);
+      if (frame) window.cancelAnimationFrame(frame);
+    };
   }, []);
 
   return (

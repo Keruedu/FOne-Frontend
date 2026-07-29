@@ -6151,10 +6151,44 @@ a {
   transform: translateX(-50%) rotate(6deg) scale(0.9);
 }
 
-/* Hover lift only makes sense once they are apart. */
-.phone-cluster:not(.is-fanned) .phone-cluster-1:hover,
-.phone-cluster:not(.is-fanned) .phone-cluster-3:hover {
-  transform: translateX(-50%) rotate(0deg) scale(0.93);
+/* A hover only teases the outer phones apart. Clicking still opens the full fan. */
+@media (hover: hover) and (pointer: fine) {
+  .phone-cluster:not(.is-fanned) .phone-cluster-1:hover {
+    left: calc(50% - 42px);
+    transform: translateX(-50%) rotate(-9deg) scale(0.92);
+  }
+
+  .phone-cluster:not(.is-fanned) .phone-cluster-3:hover {
+    left: calc(50% + 42px);
+    transform: translateX(-50%) rotate(9deg) scale(0.92);
+  }
+}
+
+@media (max-width: 760px) {
+  /* Keep the stacked state compact on touch screens. The full fan positions above
+     remain untouched when a user taps any phone. */
+  .phone-cluster:not(.is-fanned) .phone-cluster-1,
+  .phone-cluster:not(.is-fanned) .phone-cluster-3 {
+    top: 54px;
+  }
+
+  .phone-cluster:not(.is-fanned) .phone-cluster-1 {
+    transform: translateX(-50%) rotate(-6deg) scale(0.62);
+  }
+
+  .phone-cluster:not(.is-fanned) .phone-cluster-3 {
+    transform: translateX(-50%) rotate(6deg) scale(0.62);
+  }
+
+  .phone-cluster:not(.is-fanned) .phone-cluster-1:hover {
+    left: 50%;
+    transform: translateX(-50%) rotate(-6deg) scale(0.62);
+  }
+
+  .phone-cluster:not(.is-fanned) .phone-cluster-3:hover {
+    left: 50%;
+    transform: translateX(-50%) rotate(6deg) scale(0.62);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
