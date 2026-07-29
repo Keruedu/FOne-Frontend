@@ -88,7 +88,7 @@ const OAS = [
   {
     name: "FOne",
     category: "AI Service Navigator",
-    image: null,
+    image: "/brand/fone-team-logo.jpg",
     href: "https://zalo.me/2624324193992110831",
     variant: "blue",
     layout: "compact",
