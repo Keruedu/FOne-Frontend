@@ -5623,6 +5623,34 @@ a {
   white-space: nowrap;
 }
 
+.hackathon-copy h2 .hackathon-title-accent,
+.hackathon-copy h2 .hackathon-title-copy {
+  display: block;
+}
+
+.hackathon-copy h2 .hackathon-title-copy {
+  font-size: 0.78em;
+  line-height: 0.94;
+}
+
+.hackathon-copy h2 .hackathon-title-accent {
+  color: #1682ff;
+  font-size: 1em;
+  font-style: normal;
+  line-height: 0.88;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.hackathon-copy h2 .hackathon-title-za {
+  margin-bottom: 0.13em;
+  font-size: 1.12em;
+}
+
+.hackathon-copy h2 .hackathon-title-event {
+  margin-top: 0.13em;
+}
+
 @media (max-width: 760px) {
   .oa-card-floating.oa-layout-reverse {
     grid-template-columns: 28px minmax(0, 1fr) 41px;
@@ -5634,6 +5662,18 @@ a {
 
   .hackathon-copy h2 em {
     font-size: 0.76em;
+  }
+
+  .hackathon-copy h2 .hackathon-title-copy {
+    font-size: 0.72em;
+  }
+
+  .hackathon-copy h2 .hackathon-title-accent {
+    font-size: 0.9em;
+  }
+
+  .hackathon-copy h2 .hackathon-title-za {
+    font-size: 1em;
   }
 }
 
