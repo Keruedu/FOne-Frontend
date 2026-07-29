@@ -6,19 +6,19 @@ export async function OaButton({
   size?: "base" | "large";
 }) {
   const { url, invalid } = oaLink();
-  const padding = size === "large" ? "px-7 py-3.5 text-base" : "px-5 py-2.5 text-sm";
+  const sizing = size === "large" ? "button-large" : "";
 
   if (!url) {
     return (
       <span
-        className={`inline-block cursor-not-allowed rounded-full bg-surface-muted font-semibold text-ink-muted ${padding}`}
+        className={`button button-outline cursor-not-allowed opacity-60 ${sizing}`}
         title={
           invalid
             ? "NEXT_PUBLIC_ZALO_OA_URL phải có dạng https://zalo.me/<oa_id_dạng_số>"
             : "Đặt NEXT_PUBLIC_ZALO_OA_URL để bật liên kết này"
         }
       >
-        {invalid ? "Liên kết OA chưa hợp lệ" : "Liên kết OA chưa cấu hình"}
+        {invalid ? "OA chưa hợp lệ" : "Mở OA FOne"}
       </span>
     );
   }
@@ -28,9 +28,9 @@ export async function OaButton({
       href={url}
       target="_blank"
       rel="noreferrer noopener"
-      className={`inline-block rounded-full bg-zalo-500 font-semibold text-white transition-colors hover:bg-zalo-600 ${padding}`}
+      className={`button button-outline ${sizing}`}
     >
-      Quan tâm OA trên Zalo
+      Mở OA FOne
     </a>
   );
 }
