@@ -33,7 +33,7 @@ export default function LandingPage() {
           </h1>
           <p className="hero-lead">
             FOne hiểu nhu cầu của bạn và kết nối đến đúng Official Account hoặc Mini App
-            đã được xác minh — nhanh, gọn và an toàn.
+            phù hợp — nhanh, gọn và an toàn.
           </p>
           <div className="hero-actions">
             <OaButton size="large" />

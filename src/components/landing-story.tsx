@@ -23,10 +23,10 @@ const FEATURES = [
   },
   {
     number: "02",
-    eyebrow: "Danh mục có kiểm chứng",
+    eyebrow: "Danh mục có cấu trúc",
     title: "AI không tự nghĩ ra dịch vụ",
     body: "Mọi OA và Mini App được đối chiếu với Service Catalog trước khi xuất hiện trong câu trả lời.",
-    sample: "Verified OA · Canonical deeplink",
+    sample: "OA · Canonical deeplink",
   },
   {
     number: "03",
@@ -40,7 +40,7 @@ const FEATURES = [
     eyebrow: "Mở rộng nhiều dịch vụ",
     title: "Không bị khóa trong riêng OA",
     body: "Cùng một contract có thể tiếp nhận Mini App, website được duyệt hoặc nguồn dịch vụ mới mà không đổi trải nghiệm hỏi đáp.",
-    sample: "OA · Mini App · Verified service",
+    sample: "OA · Mini App · Dịch vụ",
   },
 ];
 
@@ -120,7 +120,7 @@ const JOURNEY = [
   {
     step: "02",
     label: "Xây nền dữ liệu",
-    title: "Chuẩn hóa OA thành một Service Catalog có thể kiểm chứng.",
+    title: "Chuẩn hóa OA thành một Service Catalog có thể tìm kiếm.",
     body: "Tên, danh mục, khu vực, từ khóa và canonical deeplink được gom vào một nguồn sự thật duy nhất.",
   },
   {
@@ -289,7 +289,7 @@ export function EditorialPanels() {
           <span>Nền tảng của trải nghiệm tìm dịch vụ</span>
           <h2>Đúng dữ liệu.<br />Đúng ngữ cảnh.<br />Đúng điểm đến.</h2>
           <p>
-            FOne kết hợp khả năng hiểu ngôn ngữ của AI với danh mục dịch vụ được kiểm duyệt,
+            FOne kết hợp khả năng hiểu ngôn ngữ của AI với danh mục dịch vụ có cấu trúc,
             để sự linh hoạt không đánh đổi độ tin cậy.
           </p>
           <a href="#oa-noi-bat">Xem OA nổi bật <b>→</b></a>
@@ -299,7 +299,7 @@ export function EditorialPanels() {
           <div className="catalog-layer layer-two" />
           <div className="catalog-card">
             <span>Service Catalog</span>
-            <strong>Verified</strong>
+            <strong>Phù hợp</strong>
             <i>✓</i>
           </div>
         </div>
@@ -333,7 +333,7 @@ export function OATrustWall() {
   return (
     <section id="oa-noi-bat" className="oa-trust-section">
       <div className="oa-trust-heading">
-        <span>Điểm đến đã kiểm chứng</span>
+        <span>Điểm đến phù hợp</span>
         <h2>Những OA quen thuộc.<br />Mở bằng một chạm.</h2>
         <p>Chọn một thẻ để mở đúng Official Account ngay trên Zalo.</p>
       </div>
@@ -405,7 +405,7 @@ export function HackathonStory({ oaUrl }: { oaUrl: string | null }) {
           </div>
           <div className="hackathon-message">
             <span>“Tìm giúp mình nhà thuốc Long Châu”</span>
-            <div><OaLogoImage src="/oa/longchau.jpg" size={42} /><b>Nhà thuốc Long Châu</b><small>Top result · verified</small></div>
+            <div><OaLogoImage src="/oa/longchau.jpg" size={42} /><b>Nhà thuốc Long Châu</b><small>Top result · matched</small></div>
           </div>
         </div>
         <div className="hackathon-mini-card"><strong>4</strong><span>thành viên</span></div>

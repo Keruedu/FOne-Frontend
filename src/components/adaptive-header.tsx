@@ -39,9 +39,9 @@ export function AdaptiveHeader({ oaUrl }: { oaUrl: string | null }) {
         </Link>
 
         <nav className="adaptive-nav" aria-label="Điều hướng chính">
-          <a href="#trai-nghiem"><span>Trải nghiệm</span><b aria-hidden>⌄</b></a>
-          <a href="#tinh-nang"><span>Tính năng</span><b aria-hidden>⌄</b></a>
-          <a href="#oa-noi-bat"><span>OA nổi bật</span><b aria-hidden>⌄</b></a>
+          <a href="#trai-nghiem"><span>Trải nghiệm</span></a>
+          <a href="#tinh-nang"><span>Tính năng</span></a>
+          <a href="#oa-noi-bat"><span>OA nổi bật</span></a>
           <a href="#hanh-trinh">Hành trình</a>
         </nav>
 

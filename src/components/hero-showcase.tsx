@@ -74,7 +74,7 @@ export function HeroShowcase() {
       <div className="showcase-orbit orbit-two" aria-hidden />
       <div className="stage-sticker sticker-purple" aria-hidden>
         <span>OA</span>
-        <strong>đã xác minh</strong>
+        <strong>gợi ý phù hợp</strong>
       </div>
       <div className="stage-sticker sticker-lime" aria-hidden>
         <span>5</span>

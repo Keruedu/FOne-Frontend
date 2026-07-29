@@ -145,7 +145,7 @@ export function WebChat() {
 
           <div className="prompt-trust-note">
             <i />
-            <span>Tìm kiếm trong danh mục OA đã được kiểm chứng</span>
+            <span>Tìm kiếm trong danh mục OA phù hợp</span>
           </div>
         </section>
       ) : (

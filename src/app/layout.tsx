@@ -20,7 +20,7 @@ const uiFont = Be_Vietnam_Pro({
 export const metadata: Metadata = {
   title: "FOne — Trợ lý tìm dịch vụ trên Zalo",
   description:
-    "Nhắn nhu cầu của bạn, FOne gợi ý tối đa 5 dịch vụ đã được kiểm chứng kèm liên kết mở trực tiếp trong Zalo.",
+    "Nhắn nhu cầu của bạn, FOne gợi ý tối đa 5 dịch vụ phù hợp kèm liên kết mở trực tiếp trong Zalo.",
 };
 
 export default function RootLayout({

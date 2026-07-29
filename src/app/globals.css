@@ -1704,6 +1704,242 @@ a {
   }
 }
 
+/* Final landing overrides (kept after the legacy scene rules above). */
+.oa-card-floating {
+  grid-template-columns: 52px minmax(0, 1fr) 32px;
+}
+
+.oa-card-floating .oa-showcase-logo {
+  width: 52px;
+  height: 52px;
+}
+
+.oa-card-floating .oa-showcase-copy strong {
+  font-size: 14px;
+}
+
+.oa-card-floating .oa-showcase-copy small {
+  font-size: 10px;
+}
+
+.oa-card-floating .oa-showcase-action {
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+}
+
+.oa-card-floating .oa-showcase-action svg {
+  width: 16px;
+  height: 16px;
+}
+
+.oa-card-directory {
+  grid-template-columns: 74px minmax(0, 1fr) 40px;
+  align-items: center;
+}
+
+.oa-card-directory .oa-showcase-action {
+  width: 36px;
+  height: 36px;
+  border-radius: 11px;
+}
+
+.oa-card-directory .oa-showcase-action svg {
+  width: 18px;
+  height: 18px;
+}
+
+.oa-card-directory .oa-showcase-copy {
+  justify-content: center;
+}
+
+.oa-card-directory .oa-showcase-copy strong {
+  font-size: 21px;
+  letter-spacing: -0.02em;
+}
+
+.oa-card-directory .oa-showcase-copy small {
+  margin-top: 7px;
+  font-size: 11px;
+}
+
+.oa-layout-reverse .oa-showcase-copy {
+  align-items: flex-end;
+}
+
+@media (min-width: 1051px) {
+  .hackathon-section {
+    display: grid;
+    grid-template-columns: minmax(0, 0.86fr) minmax(480px, 1.14fr);
+    column-gap: clamp(50px, 7vw, 105px);
+    align-items: center;
+    padding-top: 125px;
+  }
+
+  .hackathon-copy {
+    grid-column: 1;
+    align-self: center;
+    max-width: 620px;
+  }
+
+  .hackathon-demo {
+    grid-column: 2;
+    width: 100%;
+    min-height: 650px;
+    margin-top: 0;
+  }
+
+  .hackathon-screen {
+    right: 0;
+    left: 0;
+  }
+
+  .final-hook {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 760px) {
+  .oa-card-floating {
+    grid-template-columns: 41px minmax(0, 1fr) 28px;
+  }
+
+  .oa-card-floating .oa-showcase-logo {
+    width: 41px;
+    height: 41px;
+  }
+
+  .oa-card-floating .oa-showcase-copy strong {
+    font-size: 10px;
+  }
+
+  .oa-card-floating .oa-showcase-copy small {
+    font-size: 7px;
+  }
+
+  .oa-card-floating .oa-showcase-action {
+    width: 27px;
+    height: 27px;
+  }
+
+  .oa-card-floating .oa-showcase-action svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .oa-card-directory {
+    grid-template-columns: 52px minmax(0, 1fr) 34px;
+  }
+
+  .oa-card-directory .oa-showcase-action {
+    width: 31px;
+    height: 31px;
+  }
+
+  .oa-card-directory .oa-showcase-copy strong {
+    font-size: 16px;
+  }
+
+  .oa-card-directory .oa-showcase-copy small {
+    font-size: 9px;
+  }
+}
+
+/* OA cards: make the action affordance and typography readable at a glance. */
+.oa-card-floating {
+  grid-template-columns: 52px minmax(0, 1fr) 32px;
+}
+
+.oa-card-floating .oa-showcase-logo {
+  width: 52px;
+  height: 52px;
+}
+
+.oa-card-floating .oa-showcase-copy strong {
+  font-size: 14px;
+}
+
+.oa-card-floating .oa-showcase-copy small {
+  font-size: 10px;
+}
+
+.oa-card-floating .oa-showcase-action {
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+}
+
+.oa-card-floating .oa-showcase-action svg {
+  width: 16px;
+  height: 16px;
+}
+
+.oa-card-directory {
+  grid-template-columns: 74px minmax(0, 1fr) 40px;
+  align-items: center;
+}
+
+.oa-card-directory .oa-showcase-action {
+  width: 36px;
+  height: 36px;
+  border-radius: 11px;
+}
+
+.oa-card-directory .oa-showcase-action svg {
+  width: 18px;
+  height: 18px;
+}
+
+.oa-card-directory .oa-showcase-copy {
+  justify-content: center;
+}
+
+.oa-card-directory .oa-showcase-copy strong {
+  font-size: 21px;
+  letter-spacing: -0.02em;
+}
+
+.oa-card-directory .oa-showcase-copy small {
+  margin-top: 7px;
+  font-size: 11px;
+}
+
+.oa-layout-reverse .oa-showcase-copy {
+  align-items: flex-end;
+}
+
+@media (min-width: 1051px) {
+  .hackathon-section {
+    display: grid;
+    grid-template-columns: minmax(0, 0.86fr) minmax(480px, 1.14fr);
+    column-gap: clamp(50px, 7vw, 105px);
+    align-items: center;
+    padding-top: 125px;
+  }
+
+  .hackathon-copy {
+    grid-column: 1;
+    align-self: center;
+    max-width: 620px;
+  }
+
+  .hackathon-demo {
+    grid-column: 2;
+    width: 100%;
+    min-height: 650px;
+    margin-top: 0;
+  }
+
+  .hackathon-screen {
+    right: 0;
+    left: 0;
+  }
+
+  .final-hook {
+    grid-column: 1 / -1;
+  }
+}
+
 @media (max-width: 760px) {
   .site-header {
     padding-top: 8px;
@@ -3204,9 +3440,9 @@ a {
   justify-content: center;
   padding: 17px;
   border-radius: 20px;
-  background: #2cd6df;
-  box-shadow: 12px 14px 0 #107b8c;
-  color: #072538;
+  background: #0068ff;
+  box-shadow: 12px 14px 0 #86baff;
+  color: white;
   transform: rotate(7deg);
 }
 
@@ -3225,7 +3461,7 @@ a {
   right: auto;
   bottom: 70px;
   left: 0;
-  background: #fff;
+  background: white;
   box-shadow: 12px 14px 0 #8fbfff;
   color: #0b315f;
   transform: rotate(-7deg);
@@ -5056,5 +5292,293 @@ a {
   .phone-cluster-1:hover,
   .phone-cluster-3:hover {
     transform: translateX(-50%) rotate(0deg) scale(0.52) translateY(-6px);
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .editorial-card {
+    transition:
+      transform 420ms cubic-bezier(0.2, 0.8, 0.2, 1),
+      box-shadow 420ms ease;
+  }
+
+  .editorial-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 30px 62px -38px rgba(7, 48, 112, 0.55);
+  }
+
+  .editorial-card > div:first-child a {
+    transition:
+      gap 220ms ease,
+      transform 220ms ease,
+      box-shadow 220ms ease;
+  }
+
+  .editorial-card > div:first-child a:hover {
+    gap: 24px;
+    transform: translateY(-2px);
+    box-shadow: 0 14px 24px -18px rgba(0, 52, 148, 0.7);
+  }
+
+  .catalog-layer {
+    transition:
+      transform 600ms cubic-bezier(0.2, 0.8, 0.2, 1),
+      opacity 400ms ease;
+  }
+
+  .catalog-card {
+    transition:
+      transform 520ms cubic-bezier(0.2, 0.8, 0.2, 1),
+      box-shadow 520ms ease;
+  }
+
+  .catalog-card i {
+    transition:
+      transform 360ms ease,
+      background 360ms ease,
+      box-shadow 360ms ease;
+  }
+
+  .editorial-blue:hover .layer-one {
+    transform: rotate(-17deg) translate(-9px, 8px);
+    opacity: 0.72;
+  }
+
+  .editorial-blue:hover .layer-two {
+    transform: rotate(16deg) translate(10px, -7px);
+    opacity: 0.72;
+  }
+
+  .editorial-blue:hover .catalog-card {
+    transform: translate(-50%, -50%) rotate(-1deg) translateY(-15px) scale(1.035);
+    box-shadow:
+      25px 31px 0 #8dbdff,
+      0 48px 72px -32px rgba(0, 34, 93, 0.68);
+  }
+
+  .editorial-blue:hover .catalog-card i {
+    background: #c5e4ff;
+    box-shadow: 0 0 0 10px rgba(197, 228, 255, 0.2);
+    transform: scale(1.1) rotate(8deg);
+  }
+
+  .network-line {
+    transition:
+      width 500ms ease,
+      background 300ms ease,
+      opacity 300ms ease;
+  }
+
+  .network-node {
+    transition:
+      transform 420ms cubic-bezier(0.2, 0.8, 0.2, 1),
+      box-shadow 420ms ease,
+      background 300ms ease,
+      color 300ms ease;
+  }
+
+  .editorial-white:hover .node-center {
+    transform: translate(-50%, -50%) rotate(0deg) scale(1.08);
+    box-shadow: 20px 22px 0 #9cc8ff, 0 20px 40px -20px rgba(0, 79, 199, 0.62);
+  }
+
+  .editorial-white:hover .node-oa {
+    transform: rotate(-8deg) translate(-10px, -7px) scale(1.04);
+  }
+
+  .editorial-white:hover .node-mini {
+    transform: rotate(7deg) translate(9px, -8px) scale(1.04);
+  }
+
+  .editorial-white:hover .node-api {
+    transform: rotate(-5deg) translate(9px, 8px) scale(1.04);
+  }
+
+  .editorial-white:hover .network-line {
+    width: 205px;
+    background: #0068ff;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .editorial-card,
+  .editorial-card *,
+  .catalog-layer,
+  .catalog-card,
+  .network-node,
+  .network-line {
+    transition: none !important;
+  }
+}
+
+/* Final landing overrides (kept after the legacy scene rules above). */
+.oa-card-floating {
+  grid-template-columns: 52px minmax(0, 1fr) 32px;
+}
+
+.oa-card-floating .oa-showcase-logo {
+  width: 52px;
+  height: 52px;
+}
+
+.oa-card-floating .oa-showcase-copy strong {
+  font-size: 14px;
+}
+
+.oa-card-floating .oa-showcase-copy small {
+  font-size: 10px;
+}
+
+.oa-card-floating .oa-showcase-action {
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+}
+
+.oa-card-floating .oa-showcase-action svg {
+  width: 16px;
+  height: 16px;
+}
+
+.oa-card-directory {
+  grid-template-columns: 74px minmax(0, 1fr) 40px;
+  align-items: center;
+}
+
+.oa-card-directory .oa-showcase-action {
+  width: 36px;
+  height: 36px;
+  border-radius: 11px;
+}
+
+.oa-card-directory .oa-showcase-action svg {
+  width: 18px;
+  height: 18px;
+}
+
+.oa-card-directory .oa-showcase-copy {
+  justify-content: center;
+}
+
+.oa-card-directory .oa-showcase-copy strong {
+  font-size: 21px;
+  letter-spacing: -0.02em;
+}
+
+.oa-card-directory .oa-showcase-copy small {
+  margin-top: 7px;
+  font-size: 11px;
+}
+
+.oa-layout-reverse .oa-showcase-copy {
+  align-items: flex-end;
+}
+
+@media (min-width: 1051px) {
+  .hackathon-section {
+    display: grid;
+    grid-template-columns: minmax(0, 0.86fr) minmax(480px, 1.14fr);
+    column-gap: clamp(50px, 7vw, 105px);
+    align-items: center;
+    padding-top: 125px;
+  }
+
+  .hackathon-copy {
+    grid-column: 1;
+    align-self: center;
+    max-width: 620px;
+  }
+
+  .hackathon-demo {
+    grid-column: 2;
+    width: 100%;
+    min-height: 650px;
+    margin-top: 0;
+  }
+
+  .hackathon-screen {
+    right: 0;
+    left: 0;
+  }
+
+  .final-hook {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 760px) {
+  .oa-card-floating {
+    grid-template-columns: 41px minmax(0, 1fr) 28px;
+  }
+
+  .oa-card-floating .oa-showcase-logo {
+    width: 41px;
+    height: 41px;
+  }
+
+  .oa-card-floating .oa-showcase-copy strong {
+    font-size: 10px;
+  }
+
+  .oa-card-floating .oa-showcase-copy small {
+    font-size: 7px;
+  }
+
+  .oa-card-floating .oa-showcase-action {
+    width: 27px;
+    height: 27px;
+  }
+
+  .oa-card-floating .oa-showcase-action svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .oa-card-directory {
+    grid-template-columns: 52px minmax(0, 1fr) 34px;
+  }
+
+  .oa-card-directory .oa-showcase-action {
+    width: 31px;
+    height: 31px;
+  }
+
+  .oa-card-directory .oa-showcase-copy strong {
+    font-size: 16px;
+  }
+
+  .oa-card-directory .oa-showcase-copy small {
+    font-size: 9px;
+  }
+}
+
+.adaptive-nav a {
+  font-size: 13px;
+  letter-spacing: 0.01em;
+}
+
+.header-chat-button {
+  background: #0068ff;
+  color: white;
+}
+
+.header-chat-button:hover {
+  background: #0057d9;
+  color: white;
+}
+
+.reference-demo-phone .demo-phone-screen {
+  border-radius: 34px;
+}
+
+@media (min-width: 761px) {
+  .phone-story .demo-phone-wrap {
+    top: 54%;
+  }
+}
+
+@media (min-width: 1051px) {
+  .hackathon-copy h2 {
+    font-size: clamp(54px, 6vw, 82px);
   }
 }
