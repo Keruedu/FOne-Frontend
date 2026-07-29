@@ -137,6 +137,13 @@ const JOURNEY = [
   },
 ];
 
+const HACKATHON_FLOW = [
+  { step: "01", title: "Tin nhắn Zalo", detail: "Ngôn ngữ tự nhiên" },
+  { step: "02", title: "AI hiểu nhu cầu", detail: "Ý định · địa điểm" },
+  { step: "03", title: "Search & rank", detail: "Lọc · xếp hạng" },
+  { step: "04", title: "Mở đúng OA", detail: "Canonical link" },
+] as const;
+
 function useScrollProgress() {
   const sectionRef = useRef<HTMLElement | null>(null);
   const [progress, setProgress] = useState(0);
@@ -395,21 +402,31 @@ export function HackathonStory({ oaUrl }: { oaUrl: string | null }) {
         <div className="hackathon-screen">
           <div className="hackathon-screen-head"><span>FOne / LIVE DEMO</span><i>● ONLINE</i></div>
           <div className="hackathon-flow">
-            <div><b>01</b><span>Tin nhắn Zalo</span></div>
-            <i>→</i>
-            <div><b>02</b><span>AI hiểu nhu cầu</span></div>
-            <i>→</i>
-            <div><b>03</b><span>Search & rank</span></div>
-            <i>→</i>
-            <div><b>04</b><span>Mở đúng OA</span></div>
+            {HACKATHON_FLOW.map((item) => (
+              <article className="hackathon-flow-item" key={item.step}>
+                <b>{item.step}</b>
+                <strong>{item.title}</strong>
+                <small>{item.detail}</small>
+              </article>
+            ))}
           </div>
           <div className="hackathon-message">
-            <span>“Tìm giúp mình nhà thuốc Long Châu”</span>
-            <div><OaLogoImage src="/oa/longchau.jpg" size={42} /><b>Nhà thuốc Long Châu</b><small>Top result · matched</small></div>
+            <div className="hackathon-query">
+              <small>Yêu cầu</small>
+              <span>“Tìm giúp mình nhà thuốc Long Châu”</span>
+            </div>
+            <div className="hackathon-result">
+              <OaLogoImage src="/oa/longchau.jpg" size={48} />
+              <span className="hackathon-result-copy">
+                <b>Nhà thuốc Long Châu</b>
+                <small>Kết quả phù hợp nhất</small>
+              </span>
+              <span className="hackathon-result-action">Mở OA ↗</span>
+            </div>
           </div>
         </div>
         <div className="hackathon-mini-card"><strong>4</strong><span>thành viên</span></div>
-        <div className="hackathon-mini-card second"><strong>1</strong><span>flow thật</span></div>
+        <div className="hackathon-mini-card second"><strong>1</strong><span>flow</span></div>
       </div>
 
       <div className="final-hook">
